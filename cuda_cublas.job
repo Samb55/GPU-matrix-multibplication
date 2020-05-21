@@ -1,0 +1,9 @@
+#!/bin/bash
+# load the cuda environment
+source /opt/asn/etc/asn-bash-profiles-special/modules.sh
+module load cuda/10.1.168
+# run your software here
+./matrix_gemm_cublas data/a_3_3.mtx data/b_3_2.mtx c_3_2.mtx
+./matrix_gemm_cublas data/a_32_32.mtx data/b_32_32.mtx c_32.mtx
+./matrix_gemm_cublas data/a_1024_1024.mtx data/b_1024_1024.mtx c_1024.mtx
+./matrix_gemm_cublas data/a_2048_2048.mtx data/b_2048_2048.mtx c_2048.mtx
